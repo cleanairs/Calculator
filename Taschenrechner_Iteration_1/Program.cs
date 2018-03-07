@@ -25,7 +25,11 @@ namespace Taschenrechner_Iteration_1
             //Ausgabe
             Console.WriteLine("Das Ergebnis lautet: " + Ergebnis);
             Console.WriteLine("Enter drücken bitte. :)");
-                        Console.ReadLine();
+
+
+
+
+            Console.ReadLine();
 
 
         }

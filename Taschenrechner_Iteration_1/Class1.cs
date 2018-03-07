@@ -12,6 +12,7 @@ namespace Taschenrechner_Iteration_1
         static void Main(string[] args)
         {
             float pi = 3.14f;
+            Console.Write(pi);
         }
 
     }
