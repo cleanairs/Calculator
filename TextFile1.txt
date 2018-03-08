@@ -1,0 +1,23 @@
+User Story
+
+User Story Vorlage: Als <Rolle/Anwendertyp> möchte ich <Ziel/Wunsch/Funktion>, um <Nutzen>
+
+Titel: Addieren
+Story: Als Benutzer möchte ich zwei GleitkommaZahlen eingeben, um deren Summe berechnen zu lassen
+Akzeptanzkriterien:
+	* GleitkommaZahlen wischen -100 und 100 können addiert werden
+Status:
+	* implementiert
+	* getestet
+	* erledigt   
+	
+Titel: Starten
+Story: Als Benutzer möchte ich den Taschenrechner schnell aufrufen können um mein Resultat zu bekommen. 
+Akzeptanzkriterien:
+	* Die Anwendung wird innerhalb von 2 Sekunden auf einem Rechner gestartet
+	* Die Anwendung soll auf Win10 Rechnern laufen
+
+
+
+
+
