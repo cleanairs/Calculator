@@ -13,21 +13,15 @@ namespace Taschenrechner_Iteration_1
             string zweiterSummand = Console.ReadLine();
 
             // Wandlung string -> int (Text in Ganzzahl)
-            int ersterSummandAlsZahl = Convert.ToInt32(ersterSummand);
-            int zweiterSummandAlsZahl = Convert.ToInt32(zweiterSummand);
-
-            Console.WriteLine("Gewandelter erster Summand: {0}", ersterSummandAlsZahl);
-            Console.WriteLine("Gewandelter zweiter Summand: {0}", zweiterSummandAlsZahl);
+            float ersterSummandAlsZahl = Convert.ToSingle(ersterSummand);
+            float zweiterSummandAlsZahl = Convert.ToSingle(zweiterSummand);
 
             //Berechnung
-            int Ergebnis = ersterSummandAlsZahl + zweiterSummandAlsZahl;
+            float Ergebnis = ersterSummandAlsZahl + zweiterSummandAlsZahl;
 
             //Ausgabe
             Console.WriteLine("Das Ergebnis lautet: " + Ergebnis);
             Console.WriteLine("Enter drücken bitte. :)");
-
-
-
 
             Console.ReadLine();
 
