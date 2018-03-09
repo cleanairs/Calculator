@@ -19,7 +19,7 @@ namespace Taschenrechner_Iteration_1
             //Berechnung
             double Ergebnis = ersterSummandAlsZahl + zweiterSummandAlsZahl;
 
-            //Ausgabe
+            //Ausgabevbnvbn
             Console.WriteLine("Das Ergebnis lautet: " + Ergebnis);
             Console.WriteLine("Enter drücken bitte. :)");
 
