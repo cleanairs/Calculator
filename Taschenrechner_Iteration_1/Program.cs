@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Taschenrechner_Iteration_1
+namespace Taschenrechner
 {
     class Program
     {
@@ -15,7 +15,7 @@ namespace Taschenrechner_Iteration_1
             // Wandlung string -> int (Text in Ganzzahl)
             double ersterSummandAlsZahl = Convert.ToDouble(ersterSummand);
             double zweiterSummandAlsZahl = Convert.ToDouble(zweiterSummand);
-
+             
             //Berechnung
             double Ergebnis = ersterSummandAlsZahl + zweiterSummandAlsZahl;
 
