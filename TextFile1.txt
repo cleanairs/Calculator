@@ -2,6 +2,13 @@ User Story
 
 User Story Vorlage: Als <Rolle/Anwendertyp> möchte ich <Ziel/Wunsch/Funktion>, um <Nutzen>
 
+Titel: Softwarestruktur
+Story: Als Entwickler will ich den Quellcode sauber strukturieren um später einfacher funktionalitäten hinzufügen zu können. 
+Akzeptanzkriterien:
+	* Das Single Level of Abstraction Prinzip wird eingehalten, oder eine Abweichung ist begründet und dokumentiert. 
+Status:
+	* offen
+
 Titel: Addieren
 Story: Als Benutzer möchte ich zwei GleitkommaZahlen eingeben, um deren Summe berechnen zu lassen
 Akzeptanzkriterien:
