@@ -1,16 +1,11 @@
 ﻿using System;
 
-namespace Taschenrechner
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
+namespace Taschenrechner{
+    class Program{
+        static void Main(string[] args){
             // User Story "Addieren" : Als Benutzer möchte ich den Taschenrechner schnell aufrufen können um mein Resultat zu bekommen.
-            Console.Write("Bitte gib die erste Zahl ein und bestätige mit Enter:");
-            string ersterSummand = Console.ReadLine();
-            Console.Write("Bitte gib die zweite Zahl ein und bestätige mit Enter:");
-            string zweiterSummand = Console.ReadLine();
+            string ersterSummand = HoleSummanden("Bitte gib die erste Zahl ein und bestätige mit Enter:");
+            string zweiterSummand = HoleSummanden("Bitte gib die zweite Zahl ein und bestätige mit Enter:");
 
             // Wandlung string -> int (Text in Ganzzahl)
             double ersterSummandAlsZahl = Convert.ToDouble(ersterSummand);
@@ -23,16 +18,21 @@ namespace Taschenrechner
             Console.WriteLine("Das Ergebnis ist: " + summe);
             WarteAufBenutzerEingabe();
         }
-        static void WarteAufBenutzerEingabe()
-        {
+        
+        static void WarteAufBenutzerEingabe(){
             Console.WriteLine("Enter drücken bitte. :)");
             Console.ReadLine();
         }
-        static double Addiere(double ersterSummandAlsZahl, double zweiterSummandAlsZahl)
-        {
+        
+        static double Addiere(double ersterSummandAlsZahl, double zweiterSummandAlsZahl){
            double summe = ersterSummandAlsZahl + zweiterSummandAlsZahl;
            return summe;
         }
 
+        static string HoleSummanden(string ausgabeText){
+            Console.Write(ausgabeText);
+            string summand = Console.ReadLine();
+            return summand;
+        }
     }
 }
