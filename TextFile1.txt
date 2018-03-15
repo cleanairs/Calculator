@@ -7,7 +7,17 @@ Story: Als Entwickler will ich den Quellcode sauber strukturieren um später einf
 Akzeptanzkriterien:
 	* Das Single Level of Abstraction Prinzip wird eingehalten, oder eine Abweichung ist begründet und dokumentiert. 
 Status:
-	* offen
+	* Umgesetzt.
+	* Erledigt.
+
+Titel: Subtrahieren
+Story: Als Benutzer möchte ich zwei GleitkommaZahlen subtrahieren, um deren Different berechnen zu lassen
+Akzeptanzkriterien:
+	* GleitkommaZahlen wischen -100 und 100 können subtrahiert werden
+Status:
+	* implementiert
+	* getestet
+	* erledigt 
 
 Titel: Addieren
 Story: Als Benutzer möchte ich zwei GleitkommaZahlen eingeben, um deren Summe berechnen zu lassen
