@@ -16,22 +16,25 @@ namespace Taschenrechner
         double ersteZahlAlsDouble = Convert.ToDouble(erstZahlAlsString);
         double zweiteZahlAlsDouble = Convert.ToDouble(zweiteZahlAlsString);
 
-        //Berechnung            
+            //Berechnung            
+            double resultat = 0;
         if (operation == "+")
 	    {
-            double summe = Addiere(ersteZahlAlsDouble, zweiteZahlAlsDouble);
-	    }else
-	    {
-            double differenz = Subtrahiere(ersteZahlAlsDouble, zweiteZahlAlsDouble);
-	    }
-            
-            double differenz = Subtrahiere(ersteZahlAlsDouble, zweiteZahlAlsDouble);
+            resultat = Addiere(ersteZahlAlsDouble, zweiteZahlAlsDouble);
+            Console.WriteLine("Die Summe ist: " + resultat);
+            }
+        else if (operation == "-")
+            {
+            resultat = Subtrahiere(ersteZahlAlsDouble, zweiteZahlAlsDouble);
+            Console.WriteLine("Die Differenz ist: " + resultat);
+            }
+        else
+	        {
+                Console.WriteLine("Bitte + oder - eingeben!");
+            }
 
-        //Ausgabe
-        Console.WriteLine("Die Summe ist: " + summe);
-        Console.WriteLine("Die Differenz ist: " + differenz);
-        HoleBenutzerEingabe("Enter drücken bitte. :)");
-        }
+        HoleBenutzerEingabe("Zum beenden Enter drücker!");
+    }
 
         static double Subtrahiere(double minuend, double subtrahent)
         {
