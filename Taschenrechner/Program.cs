@@ -30,7 +30,7 @@ namespace Taschenrechner
             }
         else
 	        {
-                Console.WriteLine("Bitte + oder - eingeben!");
+                Console.WriteLine("Ungültige Eingabe!");
             }
 
         HoleBenutzerEingabe("Zum beenden Enter drücker!");
