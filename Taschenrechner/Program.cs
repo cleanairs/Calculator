@@ -18,7 +18,27 @@ namespace Taschenrechner
 
             //Berechnung            
             double resultat = 0;
-        if (operation == "+")
+            switch (operation)
+            {
+                case "+":
+                    resultat = Addiere(ersteZahlAlsDouble, zweiteZahlAlsDouble);
+                    Console.WriteLine("Die Summe ist: " + resultat);
+                    break;
+                case "-":
+                    resultat = Subtrahiere(ersteZahlAlsDouble, zweiteZahlAlsDouble);
+                    Console.WriteLine("Die Differenz ist: " + resultat);
+                    break;
+                case "/":
+                case "*":
+                    Console.WriteLine("Diese Funktion folgt in Kürze. ");
+                    break;
+                default:
+                    Console.WriteLine("Bitte + oder - eingeben!");
+                    break;
+            }
+
+
+        /*    if (operation == "+")
 	    {
             resultat = Addiere(ersteZahlAlsDouble, zweiteZahlAlsDouble);
             Console.WriteLine("Die Summe ist: " + resultat);
@@ -28,10 +48,15 @@ namespace Taschenrechner
             resultat = Subtrahiere(ersteZahlAlsDouble, zweiteZahlAlsDouble);
             Console.WriteLine("Die Differenz ist: " + resultat);
             }
+        else if (true)
+            {
+
+            }
         else
 	        {
-                Console.WriteLine("Bitte + oder - eingeben!");
+            Console.WriteLine("Bitte + oder - eingeben!");
             }
+        */
 
         HoleBenutzerEingabe("Zum beenden Enter drücker!");
     }
