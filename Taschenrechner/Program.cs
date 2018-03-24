@@ -6,15 +6,15 @@ namespace Taschenrechner
     {
         static void Main(string[] args)
         {
-        // User Story "Addieren" : Als Benutzer möchte ich den Taschenrechner schnell aufrufen können um mein Resultat zu bekommen.
-        string erstZahlAlsString = HoleBenutzerEingabe("Bitte gib die erste Zahl ein und bestätige mit Enter:");
-        string zweiteZahlAlsString = HoleBenutzerEingabe("Bitte gib die zweite Zahl ein und bestätige mit Enter:");
-        string operation = HoleBenutzerEingabe("Bitte gib für Addition + und für Substraktion - ein: ");
-            
-        // Wandlung string -> int (Text in Ganzzahl)
-        //TODO: Auslagern in Methode wenn Struktur umfangereicher geworden ist.
-        double ersteZahlAlsDouble = Convert.ToDouble(erstZahlAlsString);
-        double zweiteZahlAlsDouble = Convert.ToDouble(zweiteZahlAlsString);
+            // User Story "Addieren" : Als Benutzer möchte ich den Taschenrechner schnell aufrufen können um mein Resultat zu bekommen.
+            string erstZahlAlsString = HoleBenutzerEingabe("Bitte gib die erste Zahl ein und bestätige mit Enter:");
+            string zweiteZahlAlsString = HoleBenutzerEingabe("Bitte gib die zweite Zahl ein und bestätige mit Enter:");
+            string operation = HoleBenutzerEingabe("Bitte gib +, -, / oder * ein: ");
+
+            // Wandlung string -> int (Text in Ganzzahl)
+            //TODO: Auslagern in Methode wenn Struktur umfangereicher geworden ist.
+            double ersteZahlAlsDouble = Convert.ToDouble(erstZahlAlsString);
+            double zweiteZahlAlsDouble = Convert.ToDouble(zweiteZahlAlsString);
 
             //Berechnung            
             double resultat;
@@ -42,23 +42,28 @@ namespace Taschenrechner
             }
 
 
-        /*    if (operation == "+")
-	    {
-            resultat = Addiere(ersteZahlAlsDouble, zweiteZahlAlsDouble);
-            Console.WriteLine("Die Summe ist: " + resultat);
-            }
-        else if (operation == "-")
+            /*    if (operation == "+")
             {
-            resultat = Subtrahiere(ersteZahlAlsDouble, zweiteZahlAlsDouble);
-            Console.WriteLine("Die Differenz ist: " + resultat);
-            }
-        else
-	        {
-                Console.WriteLine("Ungültige Eingabe!");
-            }
+                resultat = Addiere(ersteZahlAlsDouble, zweiteZahlAlsDouble);
+                Console.WriteLine("Die Summe ist: " + resultat);
+                }
+            else if (operation == "-")
+                {
+                resultat = Subtrahiere(ersteZahlAlsDouble, zweiteZahlAlsDouble);
+                Console.WriteLine("Die Differenz ist: " + resultat);
+                }
+            else if (true)
+                {
 
-        HoleBenutzerEingabe("Zum beenden Enter drücker!");
-    }
+                }
+            else
+                {
+                Console.WriteLine("Bitte + oder - eingeben!");
+                }
+            */
+
+            HoleBenutzerEingabe("Zum beenden Enter drücker!");
+        }
 
         static double Subtrahiere(double minuend, double subtrahent)
         {
@@ -71,7 +76,16 @@ namespace Taschenrechner
             double summe = ersterSummandAlsZahl + zweiterSummandAlsZahl;
             return summe;
         }
-
+        static double Multipliziere(double ersterMultiplikator, double zweiterMultiplikator)
+        {
+            double produkt = ersterMultiplikator * zweiterMultiplikator;
+            return produkt;
+        }
+        public static double Dividiere(double ersterTeiler, double zweiterTeiler)
+        {
+            double quotient = ersterTeiler / zweiterTeiler;
+            return quotient;
+        }
         static string HoleBenutzerEingabe(string ausgabeText)
         {
             Console.Write(ausgabeText);
