@@ -9,7 +9,7 @@ namespace Taschenrechner
         // User Story "Addieren" : Als Benutzer möchte ich den Taschenrechner schnell aufrufen können um mein Resultat zu bekommen.
         string erstZahlAlsString = HoleBenutzerEingabe("Bitte gib die erste Zahl ein und bestätige mit Enter:");
         string zweiteZahlAlsString = HoleBenutzerEingabe("Bitte gib die zweite Zahl ein und bestätige mit Enter:");
-        string operation = HoleBenutzerEingabe("Bitte gib für Addition + und für Substraktion - ein: ");
+        string operation = HoleBenutzerEingabe("Bitte gib +, -, / oder * ein: ");
             
         // Wandlung string -> int (Text in Ganzzahl)
         //TODO: Auslagern in Methode wenn Struktur umfangereicher geworden ist.
@@ -17,7 +17,7 @@ namespace Taschenrechner
         double zweiteZahlAlsDouble = Convert.ToDouble(zweiteZahlAlsString);
 
             //Berechnung            
-            double resultat = 0;
+            double resultat;
             switch (operation)
             {
                 case "+":
@@ -28,12 +28,16 @@ namespace Taschenrechner
                     resultat = Subtrahiere(ersteZahlAlsDouble, zweiteZahlAlsDouble);
                     Console.WriteLine("Die Differenz ist: " + resultat);
                     break;
-                case "/":
                 case "*":
-                    Console.WriteLine("Diese Funktion folgt in Kürze. ");
+                    resultat = Multipliziere(ersteZahlAlsDouble, zweiteZahlAlsDouble);
+                    Console.WriteLine("Das Produkt ist: " + resultat);
+                    break;
+                case "/":
+                    resultat = Dividiere(ersteZahlAlsDouble, zweiteZahlAlsDouble);
+                    Console.WriteLine("Der Quotient ist: " + resultat);
                     break;
                 default:
-                    Console.WriteLine("Bitte + oder - eingeben!");
+                    Console.WriteLine("Bitte +, /, * oder - eingeben!");
                     break;
             }
 
@@ -72,7 +76,16 @@ namespace Taschenrechner
             double summe = ersterSummandAlsZahl + zweiterSummandAlsZahl;
             return summe;
         }
-
+        static double Multipliziere(double ersterMultiplikator, double zweiterMultiplikator)
+        {
+            double produkt = ersterMultiplikator * zweiterMultiplikator;
+            return produkt;
+        }
+        public static double Dividiere(double ersterTeiler, double zweiterTeiler)
+        {
+            double quotient = ersterTeiler / zweiterTeiler;
+            return quotient;
+        }
         static string HoleBenutzerEingabe(string ausgabeText)
         {
             Console.Write(ausgabeText);
