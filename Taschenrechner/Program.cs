@@ -17,8 +17,32 @@ namespace Taschenrechner
         double zweiteZahlAlsDouble = Convert.ToDouble(zweiteZahlAlsString);
 
             //Berechnung            
-            double resultat = 0;
-        if (operation == "+")
+            double resultat;
+            switch (operation)
+            {
+                case "+":
+                    resultat = Addiere(ersteZahlAlsDouble, zweiteZahlAlsDouble);
+                    Console.WriteLine("Die Summe ist: " + resultat);
+                    break;
+                case "-":
+                    resultat = Subtrahiere(ersteZahlAlsDouble, zweiteZahlAlsDouble);
+                    Console.WriteLine("Die Differenz ist: " + resultat);
+                    break;
+                case "*":
+                    resultat = Multipliziere(ersteZahlAlsDouble, zweiteZahlAlsDouble);
+                    Console.WriteLine("Das Produkt ist: " + resultat);
+                    break;
+                case "/":
+                    resultat = Dividiere(ersteZahlAlsDouble, zweiteZahlAlsDouble);
+                    Console.WriteLine("Der Quotient ist: " + resultat);
+                    break;
+                default:
+                    Console.WriteLine("Bitte +, /, * oder - eingeben!");
+                    break;
+            }
+
+
+        /*    if (operation == "+")
 	    {
             resultat = Addiere(ersteZahlAlsDouble, zweiteZahlAlsDouble);
             Console.WriteLine("Die Summe ist: " + resultat);
