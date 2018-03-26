@@ -17,30 +17,26 @@ namespace Taschenrechner
             double zweiteZahlAlsDouble = Convert.ToDouble(zweiteZahlAlsString);
             double resultat = Berechnung(operation, ersteZahlAlsDouble, zweiteZahlAlsDouble);
 
-            Console.WriteLine(resultat);
+            Console.WriteLine("Das Ergebnis lautet: " + resultat);
             HoleBenutzerEingabe("Zum beenden Enter drücker!");
         }
 
-        private static double Berechnung(string operation, double ersteZahl, double zweiteZahl)
+        static double Berechnung(string operation, double ersteZahl, double zweiteZahl)
         {double resultat = 0;
             switch (operation)
             {
                 case "+":
-                    double summe = ersteZahl + zweiteZahl;
-                    return summe;
-                    break;
+                    return ersteZahl + zweiteZahl;
+                      break;
                 case "-":
-                    double differenz = ersteZahl - zweiteZahl;
-                    return differenz;
-                    break;
+                    return ersteZahl - zweiteZahl;
+                     break;
                 case "*":
-                    double produkt = ersteZahl * zweiteZahl;
-                    return produkt;
+                    return ersteZahl * zweiteZahl;
                     break;
                 case "/":
-                    double quotient = ersteZahl / zweiteZahl;
-                    return quotient;
-                    break;
+                    return ersteZahl / zweiteZahl;
+                     break;
                 default:
                     Console.WriteLine("Bitte +, /, * oder - eingeben!");
                     break;
