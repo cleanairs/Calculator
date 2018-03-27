@@ -36,29 +36,30 @@ namespace Taschenrechner
                     break;
             }
 
-            private double Addiere(double ersterSummand, double zweiterSummand)
+            double Addiere(double ersterSummand, double zweiterSummand)
             {
                 double summe = ersterSummand + zweiterSummand;
 
                 return summe;
             }
 
-            private double Subtrahiere(double minuend, double subtrahent)
+            double Subtrahiere(double minuend, double subtrahent)
             {
                 double differenz = minuend - subtrahent;
 
                 return differenz;
             }
 
-            private double Dividiere(double dividend, double divisor)
+            double Dividiere(double dividend, double divisor)
             {
                 return dividend / divisor;
             }
 
-            private double Multipliziere(double multiplikator, double multiplikand)
+            double Multipliziere(double multiplikator, double multiplikand)
             {
                 return multiplikator * multiplikand;
             }
+        }
     }
 }
 
