@@ -2,6 +2,31 @@ User Story
 
 User Story Vorlage: Als <Rolle/Anwendertyp> möchte ich <Ziel/Wunsch/Funktion>, um <Nutzen>
 
+Titel: Beenden
+Story: Als Benutzer möchte ich anstelle einer weiteren Zahl beenden. 
+Akzeptanzkriterien:
+	* Fertig zum beenden eingeben
+Status:
+	* offen
+
+Titel: Fortlaufende berechnung
+Story: Als Benutzer möchte ich eine weitere zahl eingeben um die vorherige Operation nochmals mit dem vorigen Resultat auszuführen. 
+Akzeptanzkriterien:
+	* GleitkommaZahlen wischen -100 und 100 können subtrahiert werden
+	* vorige Operation verwenden
+	* Neue resultat ohne Benutzerinteraktion ausgeben
+Status:
+	* offen
+
+Titel: Objektorientierung
+Story: Als Entwickler möchte ich die Anwendung objektorientiert entwickeln um später einfach zu erweiterm.  
+Akzeptanzkriterien:
+	* Aufteilung der Funktionalitäten auf Klassen folgt dem Seperation of Concerns (SoC) 
+	* Dont repeat yourself (DRY)prinzip wird beim erstellen der Klassen und Methoden eingehalten. 
+Hinweis: * Diese Story ist eine Erweiterung der Story "Softwarestruktur"
+Status:
+	* offen
+
 Titel: Softwarestruktur
 Story: Als Entwickler will ich den Quellcode sauber strukturieren um später einfacher funktionalitäten hinzufügen zu können. 
 Akzeptanzkriterien:

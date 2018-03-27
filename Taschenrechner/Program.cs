@@ -4,51 +4,58 @@ namespace Taschenrechner
 {
     class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             // User Story "Addieren" : Als Benutzer möchte ich den Taschenrechner schnell aufrufen können um mein Resultat zu bekommen.
             string erstZahlAlsString = HoleBenutzerEingabe("Bitte gib die erste Zahl ein und bestätige mit Enter:");
             string zweiteZahlAlsString = HoleBenutzerEingabe("Bitte gib die zweite Zahl ein und bestätige mit Enter:");
             string operation = HoleBenutzerEingabe("Bitte gib +, -, / oder * ein: ");
-            
+
             // Wandlung string -> int (Text in Ganzzahl)
-            //TODO: Auslagern in Methode wenn Struktur umfangereicher geworden ist.
             double ersteZahlAlsDouble = Convert.ToDouble(erstZahlAlsString);
             double zweiteZahlAlsDouble = Convert.ToDouble(zweiteZahlAlsString);
-            double resultat = Berechnung(operation, ersteZahlAlsDouble, zweiteZahlAlsDouble);
 
-            Console.WriteLine("Das Ergebnis lautet: " + resultat);
+            // Berechnungsaufruf
+            RechnerModel model = new RechnerModel();
+            double resultat = model.Berechne(operation, ersteZahlAlsDouble, zweiteZahlAlsDouble);
+
+            // Ausgabe
+            GibResultatAus(resultat, operation);
             HoleBenutzerEingabe("Zum beenden Enter drücker!");
         }
 
-        static double Berechnung(string operation, double ersteZahl, double zweiteZahl)
-        {double resultat = 0;
-            switch (operation)
-            {
-                case "+":
-                    return ersteZahl + zweiteZahl;
-                      break;
-                case "-":
-                    return ersteZahl - zweiteZahl;
-                     break;
-                case "*":
-                    return ersteZahl * zweiteZahl;
-                    break;
-                case "/":
-                    return ersteZahl / zweiteZahl;
-                     break;
-                default:
-                    Console.WriteLine("Bitte +, /, * oder - eingeben!");
-                    break;
-            }return resultat;
-        }
-        private static string HoleBenutzerEingabe(string ausgabeText)
+        static string HoleBenutzerEingabe(string ausgabeText)
         {
             Console.Write(ausgabeText);
             string Eingabe = Console.ReadLine();
             return Eingabe;
         }
-              
-        
+
+        static void GibResultatAus(double resultat, string operation)
+        {
+            switch (operation)
+            {
+                case "+":
+                    Console.WriteLine("Die Summe ist: {0}", resultat);
+                    break;
+
+                case "-":
+                    Console.WriteLine("Die Differenz ist: {0}", resultat);
+                    break;
+
+                case "/":
+                    Console.WriteLine("Der Wert des Quotienten ist: {0}", resultat);
+                    break;
+
+                case "*":
+                    Console.WriteLine("Das Produkt ist: {0}", resultat);
+                    break;
+
+                default:
+                    Console.WriteLine("Du hast eine ungültige Auswahl der Operation getroffen.");
+                    break;
+            }
+
+        }
     }
 }
